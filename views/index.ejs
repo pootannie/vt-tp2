@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP2</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!--<form action="/adresse" method="POST">
+        Node.js, Express et MongoDB. <br>
+        <input type="text" placeholder="Prénom" name="prenom"> <br>
+        <input type="text" placeholder="Nom" name="nom"> <br>
+        <input type="text" placeholder="Téléphone" name="telephone"> <br>
+        <input type="text" placeholder="Ville" name="ville"> <br>
+        <input type="text" placeholder="Code Postal" name="codepostal"> <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul class="adresse">
+        <% for(var i=0; i<adresse.length; i++) {%>
+            <li class="client">
+                <form <%= 'action=modifier/'+ adresse[i]._id %> method="POST">
+                    <input type="text" placeholder="Prénom" name="prenom" value=<%= adresse[i].prenom %>> <br>
+                    <input type="text" placeholder="Nom" name="nom" value=<%= adresse[i].nom %>> <br>
+                    <input type="text" placeholder="Téléphone" name="telephone" value=<%= adresse[i].telephone %>> <br>
+                    <input type="text" placeholder="Ville" name="ville" value=<%= adresse[i].ville %>> <br>
+                    <input type="text" placeholder="Code Postal" name="codepostal" value=<%= adresse[i].codepostal %>> <br>
+                    <button type="submit">Modifier</button>
+                </form>
+                <a <%= 'href=detruire/'+ adresse[i]._id %> >Suppression</a>
+            </li>
+        <% } %>
+    </ul>
+-->
+<div class="container-fluid" style="margin-top: 10px">
+    <div class="table-row header">
+        <div class="text">First Name</div>
+        <div class="text">Last Name</div>
+        <div class="text">Email</div>
+        <div class="text">Birthday</div>
+        <div class="num">Min</div>
+        <div class="num">Max</div>
+        <div class="num">Avg</div>
+        <div class="num">Last</div>
+    </div>
+
+    <div class="table-row">
+        <div class="text">Vasan</div>
+        <div class="text">Subramanian</div>
+        <div class="text" title="vasan@example.com">vasan@example.com</div>
+        <div class="text">January 14, 1996</div>
+        <div class="num">1,024</div>
+        <div class="num">65,536</div>
+        <div class="num">5,120</div>
+        <div class="num">7,680</div>
+    </div>
+
+    <div class="table-row">
+        <div class="text">Firstname</div>
+        <div class="text">Lastname</div>
+        <div class="text" title="ns@example.org">ns@example.org</div>
+        <div class="text">February 31, 1948</div>
+        <div class="num">2,484</div>
+        <div class="num">5,536</div>
+        <div class="num">87</div>
+        <div class="num">785</div>
+    </div>
+
+    <div class="table-row">
+        <div class="text">Example</div>
+        <div class="text">McDude</div>
+        <div class="text" title="N/A">--</div>
+        <div class="text">December 31, 1960</div>
+        <div class="num">0</div>
+        <div class="num">249,846</div>
+        <div class="num">45,529</div>
+        <div class="num">6,687</div>
+    </div>
+</div>
+
+</body>
+</html>
