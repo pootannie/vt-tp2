@@ -1,9 +1,6 @@
 /*
  * Define the widths: play around with these to get a best fit.
  */
-@text-width: 180px;
-@num-width: 80px;
-
 .table-row {
   display: flex;           display: -webkit-flex;
   flex-direction: row;     -webkit-flex-direction: row;
@@ -14,7 +11,7 @@
   padding-right: 15px;
 }
 
-.text {
+.texte {
   flex-grow: 1;            -webkit-flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -22,12 +19,16 @@
   padding-right: 20px;
 }
 
-.text {
-  width: @text-width;
+.texte {
+  width: 180px;
 }
 
-.num {
-  width: @num-width;
+.symbole{
+  width: 80px;
+}
+
+.symbole img{
+  width: 30px;
 }
 
 /*
