@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>TP2 - Annie Vu</title>
+    <meta name="description" content="TP2 pour le cours de veille technologique">
+    <meta name="author" content="Annie Vu">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="container-fluid" style="margin-top: 10px">
+        <!-- premiere rangee du tableau -->
         <div class="table-row header">
             <div class="texte">Nom</div>
             <div class="texte">Prénom</div>
@@ -16,7 +20,7 @@
             <div class="symbole"><img src="img/ajouter.svg"></div>
         </div>
 
-        <!-- le contenu de la base de donnees -->
+        <!-- le contenu de la base de donnees qui est modifiable -->
         <% for(var i=0; i<adresse.length; i++) {%>
             <div class="table-row">
                 <div class="texte" contenteditable='true'><%= adresse[i].nom%></div>
