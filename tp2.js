@@ -33,7 +33,6 @@ app.get('/',  (req, res) => {
 
 //modifier
 app.post('/modifier', (req, res) => {
-    //console.log(req.body);
     var paramPerson = req.body;
     
     //supprimer la ligne si elle est vide
@@ -43,7 +42,7 @@ app.post('/modifier', (req, res) => {
         paramPerson["_id"] = ObjectID(paramPerson["_id"]);
     }console.log(paramPerson);
 
-    //modifier
+    //modifier - accede a la rangee a modifie et la modifie
     db.collection('adresse').save(paramPerson, (err, result) => {
         if (err) return console.log(err)
         db.collection('adresse').find(paramPerson).toArray((err, result) => {
@@ -54,7 +53,7 @@ app.post('/modifier', (req, res) => {
     })
 })
 
-//supprimer
+//supprimer - accede a la rangee a supprimer et la supprime
 app.post('/supprimer', (req, res) => {
     var id = req.body._id;
     db.collection('adresse').findOneAndDelete({"_id": ObjectID(id)}, (err, resultat) => {
