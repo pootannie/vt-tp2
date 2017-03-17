@@ -31,23 +31,25 @@ app.get('/',  (req, res) => {
     }) 
 })
 
-app.post('/modifier',  (req, res) => {
+//modifier
+app.post('/modifier', (req, res) => {
     //console.log(req.body);
     var paramPerson = req.body;
     
-    //ajouter
+    //supprimer la ligne si elle est vide
     if(paramPerson["_id"] == ""){
         delete paramPerson["_id"];
     }else{
         paramPerson["_id"] = ObjectID(paramPerson["_id"]);
     }console.log(paramPerson);
 
+    //modifier
     db.collection('adresse').save(paramPerson, (err, result) => {
-    if (err) return console.log(err)
-    db.collection('adresse').find(paramPerson).toArray((err, result) => {
-        console.log('sauvegarder dans la BD')
-        res.send({adresse:result});
-    });
+        if (err) return console.log(err)
+        db.collection('adresse').find(paramPerson).toArray((err, result) => {
+            console.log('sauvegarder dans la BD')
+            res.send({adresse:result});
+        });
     
     })
 })
@@ -58,7 +60,7 @@ app.post('/supprimer', (req, res) => {
     //console.log(id)
     db.collection('adresse').findOneAndDelete({"_id": ObjectID(id)}, (err, resultat) => {
     if (err) return console.log(err)
-    console.log('APOCALYPSE');
+    //console.log('APOCALYPSE');
     res.send({adresse:resultat});
     })
 })
