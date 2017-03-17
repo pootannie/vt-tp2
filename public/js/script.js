@@ -1,8 +1,12 @@
+//objet clique
 var objClic = document.getElementsByClassName('symbole');
 
+//selon l'objet clique, une action differente a chacune
+//ajouter
 var ajout = objClic[1];
 ajout.addEventListener('click', ajouter);
 
+//modifier et supprimer
 for (var i = 2; i < objClic.length; i++) {
 	if(i%2 == 0){
 		objClic[i].addEventListener('click', modifier);
@@ -11,9 +15,8 @@ for (var i = 2; i < objClic.length; i++) {
 	}
 }
 
-//ajouter
+//ajouter / ajout d'une rangee vide
 function ajouter(){
-	console.log('ajouter');
 	var position = this.parentElement.parentElement;
 	var rangee = document.createElement('div');
 	rangee.innerHTML = '<div class="texte" contenteditable="true"></div><div class="texte" contenteditable="true"></div><div class="texte" contenteditable="true"></div><div class="texte"></div><div class="symbole"><img src="img/sauvegarder.svg"></div><div class="symbole"><img src="img/supprimer.svg"></div>';

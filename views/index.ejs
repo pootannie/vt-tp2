@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>TP2</title>
+    <title>TP2 - Annie Vu</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
             <div class="symbole"><img src="img/ajouter.svg"></div>
         </div>
 
+        <!-- le contenu de la base de donnees -->
         <% for(var i=0; i<adresse.length; i++) {%>
             <div class="table-row">
                 <div class="texte" contenteditable='true'><%= adresse[i].nom%></div>
@@ -29,6 +30,6 @@
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
-
+    
 </body>
 </html>

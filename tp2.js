@@ -57,10 +57,8 @@ app.post('/modifier', (req, res) => {
 //supprimer
 app.post('/supprimer', (req, res) => {
     var id = req.body._id;
-    //console.log(id)
     db.collection('adresse').findOneAndDelete({"_id": ObjectID(id)}, (err, resultat) => {
-    if (err) return console.log(err)
-    //console.log('APOCALYPSE');
-    res.send({adresse:resultat});
+        if (err) return console.log(err)
+        res.send({adresse:resultat});
     })
 })
