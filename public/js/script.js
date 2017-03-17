@@ -17,24 +17,29 @@ for (var i = 2; i < objClic.length; i++) {
 
 //ajouter / ajout d'une rangee vide
 function ajouter(){
+	//variable pour la position de l'element qui va etre ajoute
 	var position = this.parentElement.parentElement;
+	//variable pour la rangee qu'on cree
 	var rangee = document.createElement('div');
+	//contenu de la nouvelle rangee
 	rangee.innerHTML = '<div class="texte" contenteditable="true"></div><div class="texte" contenteditable="true"></div><div class="texte" contenteditable="true"></div><div class="texte"></div><div class="symbole"><img src="img/sauvegarder.svg"></div><div class="symbole"><img src="img/supprimer.svg"></div>';
 	rangee.setAttribute('class', 'table-row');
+	//positionner la rangee
 	position.appendChild(rangee);
+	//creer
 	position.children[position.children.length-1].children[4].addEventListener('click', modifier, false);
 }
 
 //modifier partie 1
 function modifier(){
-	console.log("modifier");
+	//la rangee a modifier
 	elmLigneDiv = this.parentElement.children;
 	lienModifier();
 }
 
 //detruire partie 1
 function detruire(){
-	//console.log('supprimer');
+	//la rangee a supprimer
 	elmLigneDiv = this.parentElement.children;
 	lienDetruire();
 }
